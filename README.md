@@ -6,5 +6,5 @@ Originally, "being successful" for me meant being able to control individual lig
 
 All of my code is explained in the comments. The idea for this program was to first set up different light display functions, and then have the LED strip loop through these different displays. The four displays I have are a solid color that you define, blink (which is a built-in FastLED function), rainbow (which goes from rgb(0,0,0) to rgb(255, 255, 255)), and ran, which just generates a random blinking color.
 
-I used FastLED's Blink() example to get my setup code - essentially lines 1-15. Other than that, it was mainly looking up items in C++'s documentation.
+I used FastLED's Blink() example to get my setup code - essentially lines 1-15 and 35-46. Other than that, it was mainly looking up items in C++'s documentation. From there, I used what I knew from javascript and general experience to guess how everything would come together.
 
