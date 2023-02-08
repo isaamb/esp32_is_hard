@@ -9,7 +9,7 @@ All of my code is explained in the comments. The idea for this program was to fi
 I used FastLED's Blink() example to get my setup code - essentially lines 1-15 and 35-46. Other than that, it was mainly looking up items in C++'s documentation. From there, I used what I knew from javascript and general experience to guess how everything would come together.
 
 
-#More sources! 
+More sources! 
 
 This is the Youtube tutorial I followed to connect my ESP32 to the WLED app: Core Electronic - https://youtu.be/GYxctjukehY 
 
