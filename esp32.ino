@@ -11,7 +11,9 @@
 CRGB leds[NUM_LEDS];
 
 void setup() {
-  FastLED.addLeds<NEOPIXEL, DATA_PIN, RGB>(leds, NUM_LEDS); // fastLED function that "initializes the array"
+ // FastLED.addLeds<NEOPIXEL, DATA_PIN, RGB>(leds, NUM_LEDS); // fastLED function that "initializes the array"
+  FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);  // GRB ordering is assumed - from Blink example
+
 }
 
 /*set up functions for different light movements
@@ -40,17 +42,15 @@ void setup() {
   
   from fastLED library:
 */
-  int color = RED;  //define what color i want as a variable
-  leds[0] = CRGB::color;  //tell the LEDs to turn to that color
+  leds[] = CRGB::Red;  //tell the LEDs to turn to that color
   FastLED.show(); //GO
 }
 
-int blink()
 
 #define rainbow rainbow(){
   /* cycle between different colors, how do I do this gradually? */
   /* for loop that adds 5 to each RGB color value until it reaches 255? */
-  for (var n = 0; n < 255; n += 5){
+  for (int n = 0; n < 255; n += 5){
     //set all of the color values to be n so that they'll change
     int red = n;
     int green = n;
@@ -69,7 +69,7 @@ int blink()
 srand(unsigned int 5); 
 
 #define ran ran() {
-  for (k = 1; k < 10; k++){ //have it cycle through this 10 times
+  for (int k = 1; k < 10; k++){ //have it cycle through this 10 times
   	srand((unsigned) time(NULL)); //figure out a seed value for random function that depends on the time so you get a changing seed value -> different numbers
     int random = (rand() % 256); //generate a random number between 0 and 255 - doesn't include 256
     leds[i] = CRGB(random, random, random); //tell leds to blink color with random (RGB)
@@ -80,16 +80,12 @@ srand(unsigned int 5);
 int display[solid, blink(), rainbow, ran];
     
 void loop() {
-    for (n = 0; n < 3; n++){
+    for (int n = 0; n < 3; n++){
       display[n]; //show whichever display this is
-      delay(500) //wait
+      delay(2000) //wait
       if (n = 3){
         n = 0; //reset n so it will continue to loop
       }
     }
-    /*  function to cycle through different functions
-      for n= 1, n<5, n++
-        have display[n] run
-        wait 
-        if n = 3, make n = 0 again */
+    /*  function to cycle through different functions*/
 }
